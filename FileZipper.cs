@@ -8,7 +8,7 @@ namespace zip
     public class zip
     {
 
-        public static void Main()
+        public static void Main(String[] args)
         {
             Console.WriteLine("Usage: <directory>");
             
