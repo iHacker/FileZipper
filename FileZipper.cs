@@ -18,17 +18,17 @@ namespace zip
             DirectoryInfo di = new DirectoryInfo(DIR_PATH);
             foreach (FileInfo f in di.GetFiles())
             {
-                Compress(f);
+                zip_file(f);
             }
             foreach (FileInfo f in di.GetFiles("*.zip"))
             {
-                Decompress(f);
+                unzip_file(f);
 
             }
 
         }
 
-        public static void Compress(FileInfo f)
+        public static void zip_file(FileInfo f)
         {
             using (FileStream INFILE = f.OpenRead())
             {
@@ -54,7 +54,7 @@ namespace zip
             }
         }
 
-        public static void Decompress(FileInfo f)
+        public static void unzip_file(FileInfo f)
         {
             using (FileStream INFILE = f.OpenRead())
             {
